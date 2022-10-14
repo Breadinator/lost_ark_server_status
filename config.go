@@ -20,9 +20,9 @@ func defaultFilterFactory() []string { return make([]string, 0) }
 
 type Config struct {
     WebhookURL          string        `json:"webhook_url"`
-    WaitBetweenRequests time.Duration `json:"wait_between_requests"`
     LogLevel            string        `json:"log_level"`
     Filter              []string      `json:"filter"`
+    WaitBetweenRequests time.Duration `json:"wait_between_requests"`
 }
 
 func GetConfig() (Config, error) {
@@ -89,5 +89,4 @@ func GetConfig() (Config, error) {
 
     return config, nil
 }
-
 
